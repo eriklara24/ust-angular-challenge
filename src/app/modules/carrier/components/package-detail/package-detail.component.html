@@ -1,0 +1,37 @@
+<div class="package-detail">
+  <div class="package-detail__row">
+    <div class="package-detail__row__label">Paynumber: </div>
+    <div class="package-detail__row__data">{{ package.paynumber }}</div>
+  </div>
+
+  <div class="package-detail__row">
+    <div class="package-detail__row__label">Status: </div>
+    <div
+    [className]="
+        package.status === 'In Transit'
+        ? 'package-detail__row__data package-detail__row__data--in-transit'
+        : 'package-detail__row__data'
+      "
+    >{{ package.status }}</div>
+  </div>
+
+  <div class="package-detail__row">
+    <div class="package-detail__row__label">Actual Pick-Up Date: </div>
+    <div class="package-detail__row__data">{{ dateToString(package.actualPickUpDate) }}</div>
+  </div>
+
+  <div class="package-detail__row">
+    <div class="package-detail__row__label">Actual Delivery Date: </div>
+    <div class="package-detail__row__data">{{ dateToString(package.actualDeliveryDate) }}</div>
+  </div>
+
+  <div class="package-detail__row">
+    <div class="package-detail__row__label">Origin City: </div>
+    <div class="package-detail__row__data">{{ package.originCity }}</div>
+  </div>
+
+  <div class="package-detail__row">
+    <div class="package-detail__row__label">Destination City: </div>
+    <div class="package-detail__row__data">{{ package.destinationCity }}</div>
+  </div>
+</div>

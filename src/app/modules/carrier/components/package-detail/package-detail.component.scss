@@ -1,0 +1,31 @@
+@import "../../../../sass/main.scss";
+
+.package-detail {
+  border: 1px solid $color-light-blue;
+  border-radius:  0.5rem;
+  padding: 2rem;
+
+  &__row {
+    @include center-flex;
+    margin-bottom: 1rem;
+
+    &__label {
+      width: 50%;
+      text-align: right;
+      color: $color-blue;
+      padding-right: 0.5rem;
+    }
+
+    &__data {
+      width: 50%;
+
+      &--in-transit {
+        color: $color-yellow;
+      }
+
+      &--delivered {
+        color: green;
+      }
+    }
+  }
+}

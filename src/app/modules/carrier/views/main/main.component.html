@@ -1,0 +1,18 @@
+<div class="main">
+  <h1>UST Challenge</h1>
+  <h3>Look for a package</h3>
+  <form [formGroup]="trackingForm" class="main__form">  
+    <input
+      formControlName="trackingNumber"
+      type="text"
+      placeholder="15345592"
+      class="main__form__package-input"
+    >
+  </form>
+  <button (click)="getByID()" class="main__search-button">Search</button>
+  <div *ngFor="let item of items" class="main__list-of-packages">
+    <app-package-detail [package]="item"></app-package-detail>
+  </div>
+  <br/>
+  <br/>
+</div>

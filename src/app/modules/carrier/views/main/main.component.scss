@@ -1,0 +1,32 @@
+@import "../../../../sass/main.scss";
+
+.main {
+  @include center-flex;
+  flex-flow: column;
+  gap: 2rem;
+
+  &__list-of-packages {
+    width: 40%;
+  }
+
+  &__form {
+    width: 100%;
+    @include center-flex;
+
+    &__package-input {
+      height: 2rem;
+      width: 20rem;
+      font-size: 1.2rem;
+    }
+  }
+ 
+  &__search-button {
+    width: 6rem;
+    height: 3rem;
+    border: 1px solid $color-light-grey;
+    background-color: $color-green;
+    color: white;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+  }
+}
