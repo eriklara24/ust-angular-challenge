@@ -29,8 +29,8 @@ export class CarrierService {
   constructor(private http: HttpClient) {}
 
   getByID(id: string): Observable<any> {
-    // return this.http.get<any>(`${appConfig.apiUrl}${this.path}/paynumber/${id}`);
-    return this.http.get<any>(`${appConfig.apiUrl}${this.path}/paynumber/15345592`);
+    return this.http.get<any>(`${appConfig.apiUrl}${this.path}/paynumber/${id}`);
+    // return this.http.get<any>(`${appConfig.apiUrl}${this.path}/paynumber/15345592`);
 
   }
 }
